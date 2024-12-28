@@ -29,6 +29,7 @@ class Tool:
             )    
         
     def pyautoguiLocal(self,ele):
+        self.page.scroll.to_see(ele)
         pyautogui.FAILSAFE = False
         eleLocal = ele.rect.screen_location
         pyautogui.moveTo(eleLocal[0],eleLocal[1])
